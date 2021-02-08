@@ -4,14 +4,26 @@ describe("FizzBuzz", function () {
     fizzbuzz = new FizzBuzz();
   })
 
-  describe("Numbers divisbile by 3", function () {
-    it("returns true", function () {
+  describe("isDivisibleByThree", function () {
+    it("returns true when given a number divisible by 3", function () {
       expect(fizzbuzz.isDivisibleByThree(3)).toEqual(true);
     });
+    it("returns false when given a number not divisible by 3", function() {
+      expect(fizzbuzz.isDivisibleByThree(1)).toEqual(false);
+    })
   });
-  describe("Numbers divisble by 5", function() {
-    it("returns 'Buzz'", function() {
-      expect(fizzbuzz.isDivisbleByFive(5)).toEqual(true);
+  describe("isDivisibleByFive", function() {
+    it("returns true when given a number divisible by 5", function() {
+      expect(fizzbuzz.isDivisibleByFive(5)).toEqual(true);
+    })
+    it("returns false when given a number not divisible by 5", function() {
+      expect(fizzbuzz.isDivisibleByFive(1)).toEqual(false);
     })
   })
-});
+  describe("convert", function() {
+    it("returns 'Fizz' when given a number divisible by 3", function() {
+      expect(fizzbuzz.convert(3)).toEqual('Fizz');
+    })
+  })
+})
+;
